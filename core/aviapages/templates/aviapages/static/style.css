@@ -1,0 +1,37 @@
+html {
+    margin: 5px;
+}
+a:link {
+ text-decoration: none;
+}
+table {
+    margin-top: 25px;
+}
+table th, td {
+    text-align: center;
+}
+.adminPanel {
+    text-align: right;
+}
+.siteLogo {
+  border: outset black;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 25px;
+}
+.finder {
+    color: #477aa9!important;
+    font-weight: bold;
+    text-align: center;
+}
+.errorText {
+    color: red
+}
+.zoom {
+    transition: transform .2s;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.zoom:hover {
+    transform: scale(5);
+}

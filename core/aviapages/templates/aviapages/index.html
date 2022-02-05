@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load django_tables2 %}
+
+{% block body %}
+
+    <div class="finder">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% if error %}
+            <div class="errorText">
+                {{ error }}
+            </div>
+            {% endif %}
+            <div>
+                Search by {{ form.find_type }}
+                {{ form.find_string }}
+                <input type="image" height=29 width=29 style='vertical-align: bottom; margin-left: 5px' src="{% static '/img/search.png' %}">
+            </div>
+        </form>
+    </div>
+
+    {% render_table main_table %}
+
+{% endblock %}

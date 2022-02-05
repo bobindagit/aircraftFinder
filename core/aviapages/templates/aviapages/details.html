@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% csrf_token %}
+    <div width="100%" align="center">
+        {% for image in aircraft_data.images %}
+            <img src={{ image }} width="300px" height="300px"/>
+        {% endfor %}
+    </div>
+    <h4 align="center">{{ aircraft_data.type_name }}</h4>
+    <table width="100%">
+        <th>Aircraft INFO</th>
+        <th>Company INFO</th>
+        <th>Home Base INFO</th>
+        <tr>
+            <td>
+                <ul>
+                    <li><b>Tail number:</b> {{ aircraft_data.tail_number }}</li>
+                    <li><b>Serial number:</b> {{ aircraft_data.serial_number }}</li>
+                    <li><b>Year of production:</b> {{ aircraft_data.year_of_production }}</li>
+                    <li><b>Class name:</b> {{ aircraft_data.class_name }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><b>Name:</b> {{ company_data.company_name }}</li>
+                    <li><b>Phone:</b> {{ company_data.company_phone }}</li>
+                    <li><b>Website:</b> {{ company_data.company_website }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><b>Name:</b> {{ base_data.airport_name }}</li>
+                    <li><b>ICAO:</b> {{ base_data.airport_icao }}</li>
+                    <li><b>IATA:</b> {{ base_data.airport_iata }}</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}
