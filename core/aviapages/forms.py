@@ -11,4 +11,4 @@ class AircraftFinder(forms.Form):
 
 
 class AircraftInfo(forms.Form):
-    aircraft_name = forms.CharField(label='Aircraft name')
+    pass

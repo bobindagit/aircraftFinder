@@ -1,14 +1,11 @@
 import requests
-import json
+import os
 from pathlib import Path
 
 MAX_IMAGES = 3
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# AviaPages API TOKEN
-with open(f'{BASE_DIR}/env.json') as f:
-    env = json.load(f)
-    AVIAPAGES_TOKEN = env.get('AVIAPAGES_TOKEN')
+AVIAPAGES_TOKEN = os.environ.get("AVIAPAGES_TOKEN")
 HEADERS = {
         'Content-Type': 'application/json',
         'Authorization': AVIAPAGES_TOKEN
