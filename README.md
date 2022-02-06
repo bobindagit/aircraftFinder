@@ -6,11 +6,11 @@ ABOUT
   After this, you can press on the row to get more info about aircraft.
 
 REQUIREMENTS (python packages)
-  Django>=4.0.1
-  django-tables2>=2.4.1
-  django-debug-toolbar>=3.2.4
-  django-bootstrap4>=21.2
-  requests>=2.27.1
+* Django>=4.0.1
+* django-tables2>=2.4.1
+* django-debug-toolbar>=3.2.4
+* django-bootstrap4>=21.2
+* requests>=2.27.1
 
 HOW TO INSTALL
 1. First of all, you need to install Docker and Docker-compose to deploy application.
